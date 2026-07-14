@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.daniel-ddtech/adlicio",
+  "title": "Adlicio Customer Research",
+  "description": "Research customer pain points and market themes from Reddit and supported review communities.",
+  "websiteUrl": "https://tryadlicio.com/mcp",
+  "repository": {
+    "url": "https://github.com/daniel-ddtech/commentscraper-cli",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.tryadlicio.com/mcp"
+    }
+  ]
+}

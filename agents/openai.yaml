@@ -1,0 +1,12 @@
+interface:
+  display_name: "Adlicio Customer Research"
+  short_description: "Research real customer conversations"
+  default_prompt: "Use $commentscraper to research real customer pain points and return evidence-backed actions."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "adlicio"
+      description: "Hosted Adlicio customer-research MCP server"
+      transport: "streamable_http"
+      url: "https://mcp.tryadlicio.com/mcp"
