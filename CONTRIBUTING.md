@@ -9,8 +9,9 @@ Before opening a pull request:
    the current Adlicio documentation.
 2. Do not include account tokens, scraped personal data, browser profiles, or
    proprietary implementation code.
-3. Keep `SKILL.md` concise and focused on reusable agent behavior.
-4. Validate the skill and `server.json` before submitting.
+3. Keep the files under `skills/` concise and focused on reusable agent behavior.
+4. Validate the skills, `server.json`, and the plugin manifests before submitting.
+   Run `claude plugin validate .` for the plugin files.
 
 The proprietary CLI implementation is maintained separately and is not open to
 source-code contributions in this repository.
