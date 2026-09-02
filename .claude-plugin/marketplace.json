@@ -21,6 +21,7 @@
       },
       "homepage": "https://tryadlicio.com/mcp",
       "repository": "https://github.com/daniel-ddtech/commentscraper-cli",
+      "license": "MIT",
       "category": "productivity",
       "keywords": [
         "research",

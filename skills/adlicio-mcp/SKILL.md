@@ -12,6 +12,7 @@ description: >-
   Also use to re-read work the account already collected instead of paying to
   scrape it again. Do not use for general web crawling, documentation lookup, or
   pages that carry no comments, reviews, or discussion.
+license: MIT
 metadata:
   homepage: https://tryadlicio.com/mcp
   mcp_endpoint: https://mcp.tryadlicio.com/mcp

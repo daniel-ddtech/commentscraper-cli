@@ -11,6 +11,7 @@ description: >-
 compatibility: >-
   Needs Node.js 18 or newer for the CLI, network access, and an Adlicio account
   on the All Access plan.
+license: MIT
 metadata:
   homepage: https://tryadlicio.com/mcp
   package: commentscraper
