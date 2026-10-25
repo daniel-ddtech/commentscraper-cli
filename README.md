@@ -27,8 +27,13 @@ proprietary. Their implementation source is not published here.
 
 ## Install
 
-All three paths need an Adlicio account on the All Access plan. The Pro plan
-covers the Chrome extension only.
+All three paths sign in with an Adlicio account. Reddit research works on
+every plan, with a small preview on Free and Pro (Pro is the Chrome extension
+plan). Every other source, YouTube search and the finder tools need a Starter,
+Growth or Scale plan. Competitor ads, scroll stoppers, transcripts and creators
+need Growth or Scale, and competitor brands and TV ads need Scale. Accounts on
+the older All Access and Team plans keep Starter-level access. Plans and
+prices: <https://tryadlicio.com/pricing>.
 
 ### 1. Remote MCP server
 

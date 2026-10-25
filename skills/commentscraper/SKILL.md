@@ -9,8 +9,8 @@ description: >-
   user provides a supported discussion URL and wants its comments. Do not use
   for general web crawling, arbitrary page extraction, or documentation search.
 compatibility: >-
-  Needs Node.js 18 or newer for the CLI, network access, and an Adlicio account
-  on the All Access plan.
+  Needs Node.js 18 or newer for the CLI, network access, and an Adlicio account.
+  Reddit works on every plan; other sources need a Starter, Growth or Scale plan.
 license: MIT
 metadata:
   homepage: https://tryadlicio.com/mcp
@@ -22,10 +22,10 @@ metadata:
 Use Adlicio through the `commentscraper` CLI or its MCP tools. Return
 evidence-backed findings, not a raw data dump.
 
-The CLI, the MCP server, and the Adlicio web app all need the All Access plan.
-The Pro plan covers the Chrome extension only. If a command fails on plan
-access, say so plainly and point the user at <https://tryadlicio.com/app>
-rather than retrying.
+Reddit research works on every plan, with a small preview on Free and Pro (Pro
+is the Chrome extension plan). Every other source needs a Starter, Growth or
+Scale plan. If a command fails on plan access, say so plainly and point the
+user at <https://tryadlicio.com/pricing> rather than retrying.
 
 ## Workflow
 
@@ -107,7 +107,8 @@ For the full tool list, the credit costs, and when to use each one, read the
 
 ## Supported sources
 
-All sources need All Access. They include Reddit threads and profiles, YouTube,
+Reddit works on every plan; the other sources need Starter, Growth or Scale.
+They include Reddit threads and profiles, YouTube,
 Hacker News, Amazon, Steam, Trustpilot, Product Hunt, Etsy, Quora, Google Maps,
 Notion, and Shopify product reviews. Run `commentscraper platforms` when the
 current list matters.

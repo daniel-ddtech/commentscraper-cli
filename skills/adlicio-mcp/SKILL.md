@@ -37,11 +37,17 @@ key to paste. The user signs in with the Adlicio account they already have, and
 the client stores the token. Setup notes per host live at
 <https://tryadlicio.com/mcp>.
 
-Every tool needs the All Access plan. The Pro plan covers the Chrome extension
-only, so a Pro or free account can connect and see the tool list but calls
-return a structured `upgrade_required` result instead of data. If that happens,
-tell the user plainly that the MCP needs All Access and link
-<https://tryadlicio.com/app>. Do not retry the call in a loop.
+The Reddit tools (`research_topic`, `search_reddit` and `scrape_url` on Reddit)
+and `search_blind` work on every plan, with a small preview on Free and Pro (Pro
+is the Chrome extension plan). Free and Pro also get 5 Instagram comment pulls a
+week. Every other source, YouTube search and the finder tools need a Starter,
+Growth or Scale plan. `find_competitor_ads`, `find_scroll_stoppers`,
+`find_creators` and the transcript tools need Growth or Scale;
+`find_competitor_brands` and `find_tv_ads` need Scale. Accounts on the older All
+Access and Team plans keep Starter-level access. A call outside the plan returns
+a structured `upgrade_required` result instead of data. If that happens, tell
+the user plainly which plan the tool needs and link
+<https://tryadlicio.com/pricing>. Do not retry the call in a loop.
 
 Call `whoami` first in a new session. It reports the signed-in account, the
 plan, and the remaining monthly research credits.
@@ -55,14 +61,23 @@ writing:
 | --- | --- |
 | 0 | `whoami`, `search_youtube`, `list_history`, `get_history_item`, `search_history`, `get_deep_scrape`, `get_extension_job`, `scrape_facebook_group`, `get_brand_research`, `get_voc_report`, `get_audience`, `list_tracked_sources`, `add_tracked_source`, `create_brand`, `save_script` |
 | 1 | `search_reddit`, `search_blind`, `research_topic`, `find_products`, `find_competitor_ads` |
-| 3 | `find_scroll_stoppers`, `start_voc_report`, `start_brand_research`, `start_deep_scrape`, `find_early_products` |
+| 3 | `find_scroll_stoppers`, `start_deep_scrape`, `find_early_products` |
+| 4 | `start_voc_report` |
 | 5 | `find_creators` |
+| 6 | `start_brand_research` |
 
-`scrape_url` costs no credits on standard sources. It costs 1 credit on premium
-sources (Facebook, LinkedIn, Instagram, TikTok, Etsy, Walmart, eBay, Better
-Business Bureau, Sephora, Ulta, TripAdvisor) and 2 credits when the Amazon live
-scraper runs. Repeating the same scrape or search within 15 minutes is not
-charged again.
+From October 30, 2026, `research_topic` on Starter, Growth and Scale costs 1
+credit for every 5 threads it reads, so the default 10 threads cost 2.
+
+`scrape_url` costs 0 credits on YouTube, Amazon (cached or archive), the App
+Store, Google Play, Steam, AliExpress, Hacker News, Stack Exchange, Product Hunt,
+Discourse, Disqus, Notion, Reviews.io and Shopify pages with Yotpo, Loox or
+Judge.me. It costs 1 credit on Reddit, Trustpilot, G2, Etsy, Walmart, eBay,
+Sephora, Ulta, Better Business Bureau, TripAdvisor, Quora, Blind, LinkedIn,
+Facebook, Instagram, TikTok, X and the forum engines, 2 for a live Amazon pull,
+and 4 for a full Google Maps pull (3 with `max_comments` of 50 or less). A URL
+already in history returns free, and repeating the same scrape or search within
+15 minutes is not charged again.
 
 Treat credits as a real budget. Responses include `creditsRemaining` after a
 charged call. Check `whoami` before starting an expensive sequence, and tell the
